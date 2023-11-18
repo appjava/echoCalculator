@@ -1,0 +1,9 @@
+*{
+    text-align: center;
+}
+
+hr{
+    width: 60%;
+    max-width: 600px;
+    min-width: 420px;
+}
