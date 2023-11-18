@@ -3,33 +3,41 @@
 <hr>
 <h2>Eolic Energy</h2>
 <form>
-  Wind Velocity (m/s): <input type="text" [(ngModel)]="velocity" name="velocity"><br/>
-  Blade Diameter (m): <input type="text" [(ngModel)]="diameter" name="diameter"><br/>
-  Available Resource (hour): <input type="text" [(ngModel)]="timeE" name="timeE"><br/>
-  <br/><input type="submit" value="Calculate">
+  Wind Velocity (m/s): <input type="number" [(ngModel)]="velocity" name="velocity"><br/>
+  Blade Diameter (m): <input type="number" [(ngModel)]="diameter" name="diameter"><br/>
+  Available Resource (hour/d): <input type="number" [(ngModel)]="timeE" name="timeE"><br/>
+  <br/><input class="submit" type="submit" value="Calculate" (click)="potenerEol()">
+  <h4>Eolic Power: <span>{{powerE}}</span> W</h4>
+  <h4>Eolic Energy Available: <span>{{energyE}}</span> Wh/d</h4>
+  
 </form>
 
 <hr>
 <h2>Hydro Energy</h2>
 <form>
-  Flow (m3): <input type="text" [(ngModel)]="flow" name="flow"><br/>
-  Head (m): <input type="text" [(ngModel)]="head" name="head"><br/>
-  Available Resource (hour): <input type="text" [(ngModel)]="timeH" name="timeH"><br/>
-  <br/><input type="submit" value="Calculate">
+  Flow (m3): <input type="number" [(ngModel)]="flow" name="flow"><br/>
+  Head (m): <input type="number" [(ngModel)]="head" name="head"><br/>
+  Available Resource (hour/d): <input type="number" [(ngModel)]="timeH" name="timeH"><br/>
+  <br/><input class="submit" type="submit" value="Calculate" (click)="potenerHidro()">
+  <h4>Hidro Power: <span>{{powerH}}</span> W</h4>
+  <h4>Hidro Energy Available: <span>{{energyH}}</span> Wh/d</h4>
 </form>
 
 <hr>
 <h2>Solar Energy</h2>
 <form>
-  Power Solar Panel (W): <input type="text" [(ngModel)]="panelS" name="panelS"><br/>
-  Quantity Panels (Und): <input type="text" [(ngModel)]="nPanelS" name="nPanelS"><br/>
-  Available Resource (hour): <input type="text" [(ngModel)]="timeS" name="timeS"><br/>
-  <br/><input type="submit" value="Calculate">
+  Power Solar Panel (W): <input type="number" [(ngModel)]="panelS" name="panelS"><br/>
+  Quantity Panels (Und): <input type="number" [(ngModel)]="nPanelS" name="nPanelS"><br/>
+  Available Resource (hour/d): <input type="number" [(ngModel)]="timeS" name="timeS"><br/>
+  <br/><input class="submit" type="submit" value="Calculate" (click)="potenerSol()">
+  <h4>Solar Power: <span>{{powerS}}</span> W</h4>
+  <h4>Solar Energy Available: <span>{{energyS}}</span> Wh/d</h4>
 </form>
 
 <hr>
-<h3>Total Installed Power (W): <span>{{totalPower}}</span></h3>
-<h3>Total Energy Available (Wh): <span>{{totalEnergy}}</span></h3>
-
 <hr>
-<h6>{{credits}}</h6>
+<h3>Total Power: <span>{{totalPower}}</span> W</h3>
+<h3>Total Energy Available: <span>{{totalEnergy}}</span> Wh/d</h3>
+<hr>
+<hr>
+<h5>{{credits}}</h5>
