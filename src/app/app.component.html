@@ -1,43 +1,54 @@
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container-lx fixed-top bg-light p-4">
+<br/>
 <h1>{{title}}</h1>
-
-<hr>
+</div>
+<br/>
+<div class="container-sm p-4 bg-success text-white rounded">
 <h2>Eolic Energy</h2>
 <form>
   Wind Velocity (m/s): <input type="number" [(ngModel)]="velocity" name="velocity"><br/>
   Blade Diameter (m): <input type="number" [(ngModel)]="diameter" name="diameter"><br/>
   Available Resource (hour/d): <input type="number" [(ngModel)]="timeE" name="timeE"><br/>
-  <br/><input class="submit" type="submit" value="Calculate" (click)="potenerEol()">
+  <br/><input class="submit btn btn-primary" type="submit" value="Calculate" (click)="potenerEol()">
   <h4>Eolic Power: <span>{{powerE}}</span> W</h4>
   <h4>Eolic Energy Available: <span>{{energyE}}</span> Wh/d</h4>
-  
 </form>
-
-<hr>
+</div>
+<br/>
+<div class="container-sm p-4 bg-primary text-white rounded">
 <h2>Hydro Energy</h2>
 <form>
   Flow (m3): <input type="number" [(ngModel)]="flow" name="flow"><br/>
   Head (m): <input type="number" [(ngModel)]="head" name="head"><br/>
   Available Resource (hour/d): <input type="number" [(ngModel)]="timeH" name="timeH"><br/>
-  <br/><input class="submit" type="submit" value="Calculate" (click)="potenerHidro()">
+  <br/><input class="submit" type="submit" value="Calculate" (click)="potenerHidro()"><br/>
   <h4>Hidro Power: <span>{{powerH}}</span> W</h4>
   <h4>Hidro Energy Available: <span>{{energyH}}</span> Wh/d</h4>
 </form>
-
-<hr>
+</div>
+<br/>
+<div class="container-sm p-4 bg-warning text-white rounded">
 <h2>Solar Energy</h2>
 <form>
   Power Solar Panel (W): <input type="number" [(ngModel)]="panelS" name="panelS"><br/>
   Quantity Panels (Und): <input type="number" [(ngModel)]="nPanelS" name="nPanelS"><br/>
   Available Resource (hour/d): <input type="number" [(ngModel)]="timeS" name="timeS"><br/>
-  <br/><input class="submit" type="submit" value="Calculate" (click)="potenerSol()">
+  <br/><input class="submit" type="submit" value="Calculate" (click)="potenerSol()"><br/>
   <h4>Solar Power: <span>{{powerS}}</span> W</h4>
   <h4>Solar Energy Available: <span>{{energyS}}</span> Wh/d</h4>
 </form>
-
-<hr>
-<hr>
+</div>
+<br/>
+<div class="container-fluid p-4 bg-dark text-white">
 <h3>Total Power: <span>{{totalPower}}</span> W</h3>
 <h3>Total Energy Available: <span>{{totalEnergy}}</span> Wh/d</h3>
-<hr>
-<hr>
+</div>
+<br/>
+<div class="container-lx bg-light p-4">
+<br/>
 <h5>{{credits}}</h5>
+</div>
